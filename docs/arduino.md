@@ -5,7 +5,7 @@ Antes de comenzar a trabajar, hay que entender qué es Arduino y cómo funciona.
 Existen diferentes modelos de placas Arduino, cada una con características y capacidades específicas. Algunas de las placas más populares incluyen Arduino Uno, Arduino Mega y Arduino Nano. Cada placa tiene un conjunto de pines de entrada/salida que se pueden utilizar para conectar sensores, actuadores y otros componentes electrónicos.
 
 <figure>
-  <img src="/img/arduinouno.jpeg" alt="Arduino" />
+  <img src="/arduboyworkshop/img/arduinouno.jpeg" alt="Arduino" />
   <figcaption>Placa Arduino Uno.</figcaption>
 </figure>
 
@@ -22,7 +22,7 @@ El Arduino IDE es el entorno de desarrollo integrado que se utiliza para escribi
 Se pueden instalar bibliotecas adicionales para ampliar las capacidades del IDE y facilitar el desarrollo de proyectos más complejos. Además, el IDE incluye un monitor serial que permite a los usuarios enviar y recibir datos desde la placa Arduino, lo que es útil para depuración y monitoreo de proyectos.
 
 <figure>
-  <img src="/img/arduinoIDE.png" alt="Arduino IDE" />
+  <img src="/arduboyworkshop/img/arduinoIDE.png" alt="Arduino IDE" />
   <figcaption>Entorno de desarrollo Arduino IDE.</figcaption>
 </figure>
 
@@ -38,7 +38,7 @@ Arduboy es un dispositivo basado en la placa Arduino leonardo, lo que significa 
 A la hora de trabajar con Arduboy, es importante tener en cuenta las limitaciones de hardware y memoria del dispositivo. Aunque Arduboy ofrece una experiencia de juego retro y educativa, los desarrolladores deben optimizar su código y recursos para garantizar un rendimiento adecuado en el dispositivo.
 
 <figure>
-  <img src="/img/arduinoleonardo.jpeg" alt="Placa Arduino Leonardo" width="300" />
+  <img src="/arduboyworkshop/img/arduinoleonardo.jpeg" alt="Placa Arduino Leonardo" width="300" />
   <figcaption>Placa Arduino Leonardo.</figcaption>
 </figure>
 

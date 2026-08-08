@@ -10,7 +10,7 @@ En este taller, aprenderás a programar juegos para Arduboy utilizando el lengua
 
 
 <figure>
-  <img src="/img/arduboy.jpeg" alt="Arduboy" />
+  <img src="/arduboyworkshop/img/arduboy.jpeg" alt="Arduboy" />
   <figcaption>Arduboy, un dispositivo de juego portátil basado en Arduino.</figcaption>
 </figure>
 
