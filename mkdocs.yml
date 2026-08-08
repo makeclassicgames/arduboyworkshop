@@ -1,6 +1,7 @@
 site_name: ArduBoy WorkShop
 site_description: Taller acerca de ArduBoy
 site_author: Make Classic Games
+site_url: https://makeclassicgames.dev/arduboyworkshop/
 theme:
   name: material
   palette:
