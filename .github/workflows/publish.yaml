@@ -1,4 +1,4 @@
-name: ci 
+name: arduboyweb-publish 
 on:
   push:
     branches:
