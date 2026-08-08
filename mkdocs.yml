@@ -1,0 +1,39 @@
+site_name: ArduBoy WorkShop
+site_description: Taller acerca de ArduBoy
+site_author: Make Classic Games
+theme:
+  name: material
+  palette:
+    primary: 'purple'
+    accent: 'indigo'
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - search.highlight
+    - search.suggest
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - meta
+nav:
+  - Home: index.md
+  - Introducción: introduccion.md
+  - Arduino: arduino.md
+  - Instalación y Configuración: instalacion.md
+  - Hola Mundo: hola-mundo.md
+  - Entrada: input.md
+  - Dibujar Figuras: figures.md
+  - RGB: rgb.md
+  - Sonido: sound.md
+  - Creación de un juego:
+    - Introducción: game/introduccion.md
+    - Maquina de Estados: game/maquina-de-estados.md
+    - Jugabilidad: game/jugabilidad.md
+    - Jugador: game/jugador.md
+    - Power-ups: game/power-ups.md
+    - Obstaculos: game/obstaculos.md
+    - Inicio y Game Over: game/inicio-y-game-over.md
+    - Finalización: game/finalizacion.md
+  - Referencias: referencias.md
