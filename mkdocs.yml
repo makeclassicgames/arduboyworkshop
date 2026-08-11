@@ -13,9 +13,13 @@ theme:
   features:
     - search.highlight
     - search.suggest
+    - content.code.copy
 markdown_extensions:
   - admonition
-  - codehilite
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
   - footnotes
   - meta
 nav:
