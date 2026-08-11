@@ -56,12 +56,15 @@ void loop() {
   if (!arduboy.nextFrame()) return;
 
   arduboy.clear(); // Limpiamos la pantalla
-  arduboy.drawBitmap(20, 20, myImage, 8, 8, WHITE); // Dibujamos la imagen en la posición (20,20)
+  arduboy.drawSlowXYBitmap(20, 20, myImage, 8, 8, WHITE); // Dibujamos la imagen en la posición (20,20)
   arduboy.display(); // Mostramos la pantalla
 }
 ``` 
 
-En este ejemplo, hemos incluido el fichero `myImage.h` que contiene la definición de nuestra imagen. Luego, en el bucle principal (`loop()`), limpiamos la pantalla, dibujamos la imagen en la posición (20, 20) usando la función `drawBitmap()` y finalmente mostramos la pantalla con `arduboy.display()`.
+En este ejemplo, hemos incluido el fichero `myImage.h` que contiene la definición de nuestra imagen. Luego, en el bucle principal (`loop()`), limpiamos la pantalla, dibujamos la imagen en la posición (20, 20) usando la función `drawSlowXYBitmap()` y finalmente mostramos la pantalla con `arduboy.display()`.
+
+!!! info
+    La función `drawSlowXYBitmap()` es una versión más lenta de `drawBitmap()`, pero es más fácil de usar y entender. Si quieres optimizar el rendimiento, puedes usar `drawBitmap()` directamente, pero requerirá un poco más de trabajo para manejar la memoria y los parámetros. Ya que requiere que el formato de la imagen este en formato MSB (Most Significant Bit) y no LSB (Least Significant Bit) como el que hemos usado en el ejemplo. Para más información sobre cómo usar `drawBitmap()`, puedes consultar la documentación oficial de la librería Arduboy2.
 
 Con esto debería de verse la imagen en la pantalla de Arduboy. Puedes cambiar las coordenadas (20, 20) para mover la imagen a diferentes posiciones en la pantalla.
 
