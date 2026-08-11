@@ -3,7 +3,7 @@
 Arduboy proporciona una serie de funciones para dibujar figuras geométricas básicas en la pantalla. Estas funciones permiten crear líneas, rectángulos, círculos y otras formas, lo que facilita la creación de gráficos y elementos visuales en los juegos.
 En esta sección, aprenderemos a utilizar estas funciones para dibujar figuras en la pantalla del Arduboy y a combinarlas para crear gráficos más complejos.
 
-Comenzaremos comentando que puedes ver todas las funciones disponibles para dibujar figuras en la documentación oficial de la librería Arduboy2, que se encuentra en [https://mlxxxp.github.io/documents/Arduino/libraries/Arduboy2/Doxygen/html/index.html](hhttps://mlxxxp.github.io/documents/Arduino/libraries/Arduboy2/Doxygen/html/index.html). Allí encontrarás información detalladai sobre cada función, sus parámetros y ejemplos de uso.
+Comenzaremos comentando que puedes ver todas las funciones disponibles para dibujar figuras en la documentación oficial de la librería Arduboy2, que se encuentra en [https://mlxxxp.github.io/documents/Arduino/libraries/Arduboy2/Doxygen/html/index.html](https://mlxxxp.github.io/documents/Arduino/libraries/Arduboy2/Doxygen/html/index.html). Allí encontrarás información detalladai sobre cada función, sus parámetros y ejemplos de uso.
 
 Vamos a ver un par de funciones:
 
