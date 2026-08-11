@@ -26,6 +26,7 @@ nav:
   - Hola Mundo: hola-mundo.md
   - Entrada: input.md
   - Dibujar Figuras: figures.md
+  - Dibujar Imágenes: images.md
   - RGB: rgb.md
   - Sonido: sound.md
   - Creación de un juego:

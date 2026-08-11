@@ -11,7 +11,7 @@ En este taller, aprenderás a programar juegos para Arduboy utilizando el lengua
 
 <figure>
   <img src="/arduboyworkshop/img/arduboy.jpeg" alt="Arduboy" />
-  <figcaption>Arduboy, un dispositivo de juego portátil basado en Arduino.</figcaption>
+  <figcaption>Arduboy FX-C, un dispositivo de juego portátil basado en Arduino.</figcaption>
 </figure>
 
 ### Especificaciones Técnicas

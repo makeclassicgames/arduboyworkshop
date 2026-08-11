@@ -13,7 +13,7 @@ Existen diferentes modelos de placas Arduino, cada una con características y ca
 
 El funcionamiento de Arduino se basa en la programación del microcontrolador presente en la placa. Los usuarios escriben código en el entorno de desarrollo Arduino IDE, que luego se compila y se carga en la placa a través de un cable USB. Una vez cargado, el microcontrolador ejecuta el código y controla los componentes conectados a la placa.
 
-Se pueden utilizar diferentes lenguajes de programación, pero el más común es C/C++. Arduino proporciona una serie de funciones y bibliotecas que facilitan la interacción con los pines de entrada/salida y la comunicación con otros dispositivos.
+Se pueden utilizar diferentes lenguajes de programación, pero el más común es C/C++ (A través de un superset para C++). Arduino proporciona una serie de funciones y bibliotecas que facilitan la interacción con los pines de entrada/salida y la comunicación con otros dispositivos.
 
 ### Arduino IDE
 
