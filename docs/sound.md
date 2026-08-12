@@ -5,7 +5,7 @@ Arduboy tiene un altavoz incorporado que permite reproducir sonidos y música. E
 Veamos los Pines de salida que se utilizan para generar el sonido en Arduboy:
 
 * Pin 1: Permite generar sonido mediante onda cuadrada. Este pin permite generar frecuencias entre 15.26Hz a 1000000Hz.
-* Pin 2: Permite generar sonido mediante onda cuadrada. Este pin permite generar frecuencias entre61.04Hz a 15625Hz.
+* Pin 2: Permite generar sonido mediante onda cuadrada. Este pin permite generar frecuencias entre 61.04Hz a 15625Hz.
 
 Existen varias funciones y librerías que nos permiten generar sonidos y música en Arduboy. La librería `Arduboy2` proporciona funciones para reproducir tonos y música, así como para controlar el volumen y la duración del sonido.
 
