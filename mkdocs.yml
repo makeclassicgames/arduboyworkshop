@@ -4,6 +4,8 @@ site_author: Make Classic Games
 site_url: https://makeclassicgames.dev/arduboyworkshop/
 theme:
   name: material
+  favicon: img/arduboyico.png
+  logo: img/arduboyico.png
   palette:
     primary: 'purple'
     accent: 'indigo'
@@ -21,6 +23,7 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
   - footnotes
+  - tables
   - meta
 nav:
   - Home: index.md

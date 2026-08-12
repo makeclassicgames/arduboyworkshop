@@ -70,3 +70,84 @@ Con esto debería de verse la imagen en la pantalla de Arduboy. Puedes cambiar l
 
 ## Sprites y Conversiones
 
+Una vez visto como se muestran imágenes, en otras ocasiones es necesario trabajar con Sprites. Un Sprite es un objeto gráfico que se puede mover y manipular en la pantalla. Los Sprites son útiles para crear personajes, enemigos y otros elementos interactivos en los juegos.
+
+Arduboy tiene una clase especial para manejar Sprites llamada `Sprites`. Esta clase proporciona funciones para dibujar y animar Sprites en la pantalla. Para usar Sprites, primero debemos definirlos de manera similar a como definimos las imágenes, pero con algunas diferencias.
+
+Para definir un Sprite, podemos usar un array de bytes que representa cada fotograma del Sprite. Cada fotograma es una imagen que se mostrará en la pantalla. Veamos un ejemplo de cómo definir un Sprite con dos fotogramas:
+
+```cpp
+const uint8_t PROGMEM mySprite[]  = {
+  8,8,
+  // Fotograma 1
+  0b01111110, // Fila 1
+  0b10000001, // Fila 2
+  0b10000001, // Fila 3
+  0b10100101, // Fila 4
+  0b10000001, // Fila 5
+  0b10011001, // Fila 6
+  0b10000001, // Fila 7
+  0b01111110, // Fila 8
+  // Fotograma 2
+  0b01111110, // Fila 1
+  0b10000001, // Fila 2
+  0b10000001, // Fila 3
+  0b10011001, // Fila 4
+  0b10000001, // Fila 5
+  0b10100101, // Fila 6
+  0b10000001, // Fila 7
+  0b01111110, // Fila 8
+};
+```
+
+Podemos observar que los dos primeros bytes del array indica el ancho y alto del Sprite (8x8 píxeles en este caso). Luego, cada fotograma se define de manera similar a como definimos las imágenes, con cada fila representada por un byte.
+
+Obviamente, para un ejemplo sencillo como el que vemos, se puede calcular a mano los bytes de la imagen... sin embargo, en otras ocasiones es algo más complicado y tedioso. Por ello, existen herramientas que nos permiten convertir imágenes a este formato binario de manera automática. Una de estas herramientas es [Image Converter](https://www.bloggingadeadhorse.com/TeamARGImgConverter/), que nos permite cargar una imagen y generar el código necesario para usarla en Arduboy.
+
+Veamos un ejemplo de como mostrar una imagen. Para ello, hemos creado una imagen de 1 fotograma de 64x64 pixeles para mostrar por pantalla la foto del gran Streamer Caliebre (Al cual dedicamos este taller).
+
+La imagen podemos descargarla desde el siguiente enlace:
+
+<a href="/arduboyworkshop/img/caliebre.jpeg" target="_blank" download>Descargar Imagen</a>
+
+Una vez descargada, podemos usar la herramienta [Image Converter](https://www.bloggingadeadhorse.com/TeamARGImgConverter/) para convertirla a un formato compatible con Arduboy. Solo tenémos que arrastrar la imagen a la herramienta y esta nos devolverá el código necesario para usarla en nuestro proyecto. 
+
+<figure>
+  <img src="/arduboyworkshop/img/converter.png" alt="Imagen convertida" width="400">
+  <figcaption>Conversor, con la imagen convertida</figcaption>
+</figure>
+
+Recuerda que debes copiar el código generado por la herramienta y pegarlo en un fichero `.h` (por ejemplo `caliebre.h`) para poder incluirlo en tu proyecto.
+
+Veamos el código de ejemplo para mostrar la imagen convertida en la pantalla de Arduboy:
+
+```cpp
+#include <Arduboy2.h>
+#include "caliebre.h" // Incluimos el fichero con la imagen convertida
+
+Arduboy2 arduboy;
+Sprites sprites;
+
+void setup() {
+  arduboy.begin();
+  arduboy.setFrameRate(60);
+}
+
+void loop() {
+  if (!arduboy.nextFrame()) return;
+
+  arduboy.clear(); // Limpiamos la pantalla
+  sprites.drawSelfMasked(32, 0, caliebre, 0); // Dibujamos la imagen en la posición (32,0)
+  arduboy.display(); // Mostramos la pantalla
+}
+```
+
+!!! info
+    En este ejemplo se usa la clase `Sprites` para dibujar la imagen convertida. La función `drawSelfMasked()` se utiliza para dibujar la imagen en la pantalla, y el último parámetro indica el fotograma que queremos mostrar (en este caso, el fotograma 0, ya que solo tenemos un fotograma). Existe una clase mejorada llamada `SpritesB` que permite dibujar Sprites de una forma más eficiente. Para más información sobre cómo usar `SpritesB`, puedes consultar la documentación oficial de la librería Arduboy2.
+
+Con la imagen y el código ya podemos mostrar la imagen en la pantalla de Arduboy. Puedes cambiar las coordenadas (32, 0) para mover la imagen a diferentes posiciones en la pantalla.
+
+<figure>
+  <img src="/arduboyworkshop/img/arducaliebre.jpg" alt="Imagen en Arduboy" width="400">
+  <figcaption>Imagen convertida y mostrada en la pantalla de Arduboy</figcaption>
+</figure>
