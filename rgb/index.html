@@ -1,0 +1,1049 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Taller acerca de ArduBoy">
+      
+      
+        <meta name="author" content="Make Classic Games">
+      
+      
+        <link rel="canonical" href="https://makeclassicgames.dev/arduboyworkshop/rgb/">
+      
+      
+        <link rel="prev" href="../images/">
+      
+      
+        <link rel="next" href="../sound/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../img/arduboyico.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>RGB - ArduBoy WorkShop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#rgb" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ArduBoy WorkShop" class="md-header__button md-logo" aria-label="ArduBoy WorkShop" data-md-component="logo">
+      
+  <img src="../img/arduboyico.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ArduBoy WorkShop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              RGB
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ArduBoy WorkShop" class="md-nav__button md-logo" aria-label="ArduBoy WorkShop" data-md-component="logo">
+      
+  <img src="../img/arduboyico.png" alt="logo">
+
+    </a>
+    ArduBoy WorkShop
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arduino/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arduino
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalación y Configuración
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hola-mundo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hola Mundo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entrada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../figures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dibujar Figuras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../images/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dibujar Imágenes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RGB
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RGB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usando-entradassalidas-digitales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usando entradas/salidas digitales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usando-entradassalidas-analogicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usando entradas/salidas analógicas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sound/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sonido
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creación de un juego
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Creación de un juego
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../game/introduccion.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../game/maquina-de-estados.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maquina de Estados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../game/jugabilidad.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jugabilidad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../game/jugador.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jugador
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../game/power-ups.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Power-ups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../game/obstaculos.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Obstaculos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../game/inicio-y-game-over.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio y Game Over
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../game/finalizacion.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finalización
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../referencias/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referencias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usando-entradassalidas-digitales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usando entradas/salidas digitales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usando-entradassalidas-analogicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usando entradas/salidas analógicas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="rgb">RGB</h1>
+<p>Arduboy cuenta con un led RGB que nos permite mostrar diferentes colores en la parte frontal de la consola. Este led se encuentra en la parte superior izquierda de la consola, justo al lado del altavoz.</p>
+<p>Podemos controlar el color del led RGB mediante varias funciones que nos permiten encenderlo, apagarlo y cambiar su color. Dependiendo si queremos usar entradas/salidas analógicas o digitales, podemos usar diferentes funciones para controlar el led RGB.</p>
+<h2 id="usando-entradassalidas-digitales">Usando entradas/salidas digitales</h2>
+<p>Comenzaremos utilizando las entradas/salidas digitales para controlar el led RGB. Para ello, utilizaremos la función <code>digitalWriteRGB()</code>, que nos permite establecer el color del led RGB mediante valores de intensidad para cada uno de los colores (rojo, verde y azul).</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Una entrada/salida digital es un pin que puede estar en uno de dos estados: alto (HIGH) o bajo (LOW). En el caso del led RGB, podemos encender o apagar cada uno de los colores utilizando estos estados.</p>
+</div>
+<p>Esta función tiene 2 definiciones:</p>
+<ul>
+<li><code>digitalWriteRGB(uint8_t color, uint8_t val)</code>: Esta definición nos permite establecer el color del led RGB mediante valores de intensidad para cada uno de los colores (rojo, verde y azul). El valor para el color se pasa en el primer parámetro con los valores recibidos son <code>RED_LED</code>, <code>GREEN_LED</code> o <code>BLUE_LED</code>. El segundo parámetro recibe los valores <code>RGB_ON</code> y <code>RGB_OFF</code>, que representan los estados alto y bajo respectivamente. Por ejemplo, para encender el color rojo, podemos usar <code>digitalWriteRGB(RED_LED, RGB_ON)</code>.</li>
+<li><code>digitalWriteRGB(uint8_t red, uint8_t green, uint8_t blue)</code>: Esta definición nos permite establecer el color del led RGB mediante valores de intensidad para cada uno de los colores (rojo, verde y azul). Los valores para cada color se pasan en los parámetros <code>red</code>, <code>green</code> y <code>blue</code>, con valores como <code>RGB_ON</code> y <code>RGB_OFF</code>, que representan los estados alto y bajo respectivamente. Por ejemplo, para encender el color rojo, podemos usar <code>digitalWriteRGB(RGB_ON, RGB_OFF, RGB_OFF)</code>.</li>
+</ul>
+<p>Podemos ver la siguiente tabla con los valores que podemos usar para encender o apagar cada uno de los colores del led RGB:</p>
+<table>
+<thead>
+<tr>
+<th>RED_LED</th>
+<th>GREEN_LED</th>
+<th>BLUE_LED</th>
+<th>Color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RGB_ON</td>
+<td>RGB_OFF</td>
+<td>RGB_OFF</td>
+<td>Rojo</td>
+</tr>
+<tr>
+<td>RGB_OFF</td>
+<td>RGB_ON</td>
+<td>RGB_OFF</td>
+<td>Verde</td>
+</tr>
+<tr>
+<td>RGB_OFF</td>
+<td>RGB_OFF</td>
+<td>RGB_ON</td>
+<td>Azul</td>
+</tr>
+<tr>
+<td>RGB_ON</td>
+<td>RGB_ON</td>
+<td>RGB_OFF</td>
+<td>Amarillo</td>
+</tr>
+<tr>
+<td>RGB_ON</td>
+<td>RGB_OFF</td>
+<td>RGB_ON</td>
+<td>Magenta</td>
+</tr>
+<tr>
+<td>RGB_OFF</td>
+<td>RGB_ON</td>
+<td>RGB_ON</td>
+<td>Cian</td>
+</tr>
+<tr>
+<td>RGB_ON</td>
+<td>RGB_ON</td>
+<td>RGB_ON</td>
+<td>Blanco</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usando-entradassalidas-analogicas">Usando entradas/salidas analógicas</h2>
+<p>Una vez hemos visto como trabajar con entradas/salidas digitales, podemos usar entradas/salidas analógicas para controlar el led RGB. Para ello, utilizaremos la función <code>setRGBled()</code>, que nos permite establecer el color del led RGB mediante valores de intensidad para cada uno de los colores (rojo, verde y azul).</p>
+<p>Es importante mencionar que una salida analógica es un pin que puede tener un valor de voltaje variable, lo que nos permite controlar la intensidad de cada uno de los colores del led RGB. En el caso del led RGB, podemos establecer la intensidad de cada color mediante valores de 0 a 255, donde 0 representa apagado y 255 representa encendido al máximo.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>En Arduino las salidas analógicas se manejan utilizando dispositivos especiales llamados PWM (Pulse Width Modulation), que nos permiten simular una salida analógica mediante la modulación de ancho de pulso. Esto permite establecer diferentes niveles de voltaje en el pin de salida. Para realizar esto, se utilizan los dispositivos DAC (Digital to Analog Converter), que convierten una señal digital en una señal analógica. En el caso del led RGB, podemos usar estos dispositivos para controlar la intensidad de cada color mediante valores de 0 a 255 (8 bits).</p>
+</div>
+<p>Para el caso del led RGB, podemos establecer la intensidad de cada color mediante valores de 0 a 255, donde 0 representa apagado y 255 representa encendido al máximo. Por ejemplo, para encender el color rojo al máximo, podemos usar <code>setRGBled(255, 0, 0)</code>. Para encender el color verde al 50% de intensidad, podemos usar <code>setRGBled(0, 128, 0)</code>.</p>
+<p>Puedes ver un ejemplo completo en los ejemplos de la librería Arduboy2, donde se muestra como encender el led RGB con diferentes colores y niveles de intensidad. En el ejemplo <code>RGBLED</code>, podemos ver como se enciende el led RGB con diferentes colores y niveles de intensidad mediante la función <code>setRGBled()</code> o utilizando la función <code>digitalWriteRGB()</code>. En este ejemplo, se enciende el led RGB con diferentes colores y niveles de intensidad mediante un bucle que recorre los valores de intensidad para cada color.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["search.highlight", "search.suggest", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
